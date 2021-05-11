@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// START: IMPORTS
+import React from 'react'
+import styled from 'styled-components'
 
-function App() {
+// Start: Import Components
+import UserSummary from './components/UserSummary'
+// End: Import Components
+// END: IMPORTS
+
+
+// Start: Styled Components
+const StyledDiv = styled.div`
+  width:90%;
+  max-width:40rem;
+  margin: 2rem auto;
+  border:1px solid #ccc;
+  padding:1rem;
+  
+`
+// End: Styled Components
+
+
+// Start: Template
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <StyledDiv>
+      <UserSummary />
+    </StyledDiv>
+  )
 }
+// End: Template
 
-export default App;
+
+export default App
